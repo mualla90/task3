@@ -42,6 +42,7 @@ Route::post('/tasks',function(){
 });
 Route::post('/tasks/{id}/addComment',[CommentController::class,'addNewComment']);
 Route::get('/tasks/getCommentWithAssociatedTask',[CommentController::class,'getAllCommentWithSpecificTask']);
+Route::delete('comments/{id}',[CommentController::class,'delete']);
 
 
 

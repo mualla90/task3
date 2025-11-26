@@ -24,4 +24,15 @@ class CommentController extends Controller
         ]);
 
    }
+    public function delete($id){
+        $comment=Comment::findOrFail($id);
+
+            $comment->delete();
+
+            return response()->json([
+                'message'=>'comment deleted successfully',
+                'status'=>200,
+            ]);
+
+   }
 }
